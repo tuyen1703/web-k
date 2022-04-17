@@ -1,0 +1,34 @@
+.welcome {
+    padding: 50px;
+    text-align: center;
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        &-item {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            .icon {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                i {
+                    font-size: 40px;
+                    color: $orange-color;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .welcome {
+        &-list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
